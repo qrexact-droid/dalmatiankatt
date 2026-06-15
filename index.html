@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===================== SEO ===================== -->
+<title>Dalmatian Katt — Funny Animated Cartoon Rapper | Official DK Merch</title>
+<meta name="description" content="Dalmatian Katt (DK) is a hilarious animated cartoon rapper. Watch the cartoon, shop the official DK t-shirt and hoodie, and grab the ringtone." />
+<meta name="keywords" content="Dalmatian Katt, DK, animated cartoon rapper, funny cartoon, indie animation, comedy animation, cartoon merch, cartoon t-shirt, cartoon hoodie, rap cartoon, DK Problems" />
+<meta name="author" content="Dalmatian Katt" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.dalmatiankatt.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dalmatian Katt — Funny Animated Cartoon Rapper" />
+<meta property="og:description" content="The official home of Dalmatian Katt (DK). Watch the cartoon on YouTube. Shop official merch." />
+<meta property="og:image" content="images/banner.png" />
+<meta property="og:url" content="https://www.dalmatiankatt.com/" />
+<meta property="og:site_name" content="Dalmatian Katt" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dalmatian Katt — Funny Animated Cartoon Rapper" />
+<meta name="twitter:description" content="Official DK t-shirt, hoodie & ringtone. Watch the cartoon on YouTube." />
+<meta name="twitter:image" content="images/banner.png" />
+<meta name="theme-color" content="#7b3ff2" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Dalmatian Katt",
+  "alternateName":"DK",
+  "url":"https://www.dalmatiankatt.com/",
+  "description":"Official site of Dalmatian Katt (DK), a funny animated cartoon rapper. Shop merch and watch the cartoon on YouTube."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"PerformingGroup",
+  "name":"Dalmatian Katt",
+  "alternateName":"DK",
+  "genre":["Comedy","Animation","Hip Hop"],
+  "url":"https://www.dalmatiankatt.com/",
+  "sameAs":["https://www.youtube.com/@dalmatiankatt"],
+  "description":"Dalmatian Katt is an animated cartoon rapper and comedian, with singer Roxy Roo and rival Go Realla."
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Bangers&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple:   #7b3ff2;
+    --purple-dark: #4a1fa8;
+    --orange:   #ff7a2f;
+    --yellow:   #ffd23f;
+    --cyan:     #28e0e0;
+    --ink:      #1a0833;
+    --ink2:     #120526;
+    --white:    #ffffff;
+    --card-bg:  #230d4a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    background: rgba(26, 8, 51, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--purple);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+  }
+
+  .nav-logo span {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.8);
+    transition: color 0.2s;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: var(--orange); }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 100px 24px 60px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--ink2);
+    z-index: 0;
+  }
+
+  .hero-banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.55;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(26,8,51,0.3) 0%, rgba(26,8,51,0.85) 100%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+  }
+
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 0 20px var(--purple));
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .hero-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-shadow: 4px 4px 0 var(--purple-dark), 0 0 40px rgba(123,63,242,0.6);
+    margin-bottom: 8px;
+  }
+
+  .hero-title span { color: var(--orange); }
+
+  .hero-subtitle {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    letter-spacing: 3px;
+    color: var(--cyan);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 520px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-transform: uppercase;
+  }
+
+  .btn:hover { transform: translateY(-2px); }
+
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+    box-shadow: 0 4px 20px rgba(255,122,47,0.5);
+  }
+  .btn-primary:hover { box-shadow: 0 6px 28px rgba(255,122,47,0.7); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 16px rgba(40,224,224,0.2);
+  }
+  .btn-secondary:hover { box-shadow: 0 0 24px rgba(40,224,224,0.4); background: rgba(40,224,224,0.08); }
+
+  /* ===== SECTION SHARED ===== */
+  section { padding: 80px 24px; }
+
+  .section-label {
+    display: inline-block;
+    font-family: 'Bangers', cursive;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: 1px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .section-title span { color: var(--orange); }
+
+  .section-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* ===== CHARACTERS ===== */
+  #characters {
+    background: var(--ink2);
+  }
+
+  .characters-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .characters-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .character-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(123,63,242,0.3);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+
+  .character-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+    box-shadow: 0 12px 40px rgba(255,122,47,0.2);
+  }
+
+  .character-card.featured {
+    border-color: var(--orange);
+    box-shadow: 0 0 30px rgba(255,122,47,0.2);
+  }
+
+  .character-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Bangers', cursive;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .character-img-wrap {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--purple-dark), var(--ink2));
+  }
+
+  .character-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s;
+  }
+
+  .character-card:hover .character-img-wrap img {
+    transform: scale(1.04);
+  }
+
+  .character-info {
+    padding: 20px 22px 24px;
+  }
+
+  .character-name {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5rem;
+    color: var(--yellow);
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+
+  .character-role {
+    font-family: 'Bangers', cursive;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .character-bio {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+  }
+
+  /* ===== YOUTUBE ===== */
+  #watch {
+    background: var(--ink);
+  }
+
+  .watch-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .watch-header {
+    margin-bottom: 40px;
+  }
+
+  .yt-embed-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid var(--purple);
+    box-shadow: 0 0 50px rgba(123,63,242,0.4);
+  }
+
+  .yt-embed-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .yt-channel-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 14px 36px;
+    background: #ff0000;
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-transform: uppercase;
+  }
+
+  .yt-channel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(255,0,0,0.4);
+  }
+
+  .yt-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ===== STORE ===== */
+  #store {
+    background: var(--ink2);
+  }
+
+  .store-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .store-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+  }
+
+  .product-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(123,63,242,0.3);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--orange);
+    box-shadow: 0 12px 40px rgba(255,122,47,0.2);
+  }
+
+  .product-img-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #0f0422;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-img-wrap img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+
+  .product-card:hover .product-img-wrap img {
+    transform: scale(1.05);
+  }
+
+  .product-img-wrap.digital {
+    background: linear-gradient(135deg, var(--purple-dark), #0d021f);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .digital-icon {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .digital-label {
+    font-family: 'Bangers', cursive;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-transform: uppercase;
+  }
+
+  .product-info {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .product-name {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  .product-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: var(--yellow);
+    letter-spacing: 1px;
+  }
+
+  .buy-btn {
+    padding: 10px 24px;
+    background: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255,122,47,0.5);
+  }
+
+  .store-coming-soon {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px dashed rgba(255,255,255,0.15);
+    border-radius: 12px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ink2);
+    border-top: 2px solid rgba(123,63,242,0.3);
+    padding: 48px 24px 32px;
+    text-align: center;
+  }
+
+  .footer-autograph {
+    height: 56px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    filter: brightness(0) invert(1) opacity(0.7);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--orange); }
+
+  .footer-yt {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+  }
+
+  .footer-yt:hover { color: #ff0000; }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--purple), var(--orange));
+    border-radius: 2px;
+    margin: 16px auto 0;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 640px) {
+    nav { padding: 12px 16px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 0.75rem; }
+    .hero-logo { width: 90px; height: 90px; }
+    .hero-btns { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 280px; justify-content: center; }
+    section { padding: 60px 16px; }
+  }
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Dalmatian Katt logo" />
+    <span>Dalmatian Katt</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#characters">Characters</a></li>
+    <li><a href="#watch">Watch</a></li>
+    <li><a href="#store">Merch</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <img src="images/banner.png" alt="Dalmatian Katt and the crew" class="hero-banner-img" />
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <img src="images/logo.png" alt="DK" class="hero-logo" />
+    <h1 class="hero-title">Dalmatian <span>Katt</span></h1>
+    <p class="hero-subtitle">The Animated Cartoon Rapper</p>
+    <p class="hero-desc">
+      Street smart. Bark game on point. Follow DK and the crew as they rap, scheme, and hustle their way through life's wildest moments.
+    </p>
+    <div class="hero-btns">
+      <a href="#watch" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        Watch Now
+      </a>
+      <a href="#store" class="btn btn-secondary">
+        Shop Merch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHARACTERS ===== -->
+<section id="characters">
+  <div class="characters-inner">
+    <div class="characters-header reveal">
+      <span class="section-label">The Crew</span>
+      <h2 class="section-title">Meet the <span>Characters</span></h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="character-grid">
+
+      <div class="character-card featured reveal">
+        <div class="character-badge">The Star</div>
+        <div class="character-img-wrap">
+          <img src="images/dk image.png" alt="Dalmatian Katt — DK the cartoon rapper" />
+        </div>
+        <div class="character-info">
+          <div class="character-name">Dalmatian Katt</div>
+          <div class="character-role">Rapper · Main Character</div>
+          <p class="character-bio">DK's got bars, big dreams, and bigger problems. The spotted cat with the smoothest flow in the city — when things go sideways, DK finds a way to rap his way through it.</p>
+        </div>
+      </div>
+
+      <div class="character-card reveal">
+        <div class="character-img-wrap">
+          <img src="images/roxy image.png" alt="Roxy Roo — kangaroo singer" />
+        </div>
+        <div class="character-info">
+          <div class="character-name">Roxy Roo</div>
+          <div class="character-role">Singer · DK's Girl</div>
+          <p class="character-bio">DK's ride-or-die. Roxy's got the voice, the vibe, and zero patience for nonsense. She keeps DK grounded — mostly.</p>
+        </div>
+      </div>
+
+      <div class="character-card reveal">
+        <div class="character-img-wrap">
+          <img src="images/gorealla image.png" alt="Go Realla — gorilla rival" />
+        </div>
+        <div class="character-info">
+          <div class="character-name">Go Realla</div>
+          <div class="character-role">Gorilla · DK's Rival</div>
+          <p class="character-bio">Big. Loud. Always thinks he's the main character. Go Realla stays in DK's way, but DK stays one verse ahead.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WATCH ===== -->
+<section id="watch">
+  <div class="watch-inner">
+    <div class="watch-header reveal">
+      <span class="section-label">On YouTube</span>
+      <h2 class="section-title">Watch <span>DK</span></h2>
+      <p class="section-desc" style="margin: 12px auto 0;">New episodes and shorts on the official Dalmatian Katt YouTube channel. Subscribe and don't miss a drop.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="yt-embed-wrap reveal">
+      <iframe
+        src="https://www.youtube.com/embed?listType=user_uploads&list=dalmatiankatt&rel=0&modestbranding=1"
+        title="Dalmatian Katt YouTube Channel"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <a href="https://www.youtube.com/@dalmatiankatt" target="_blank" rel="noopener noreferrer" class="yt-channel-btn">
+      <svg class="yt-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      Subscribe on YouTube
+    </a>
+  </div>
+</section>
+
+<!-- ===== STORE ===== -->
+<section id="store">
+  <div class="store-inner">
+    <div class="store-header reveal">
+      <span class="section-label">Official Merch</span>
+      <h2 class="section-title">DK <span>Store</span></h2>
+      <p class="section-desc" style="margin: 12px auto 0;">Rep the crew. Official Dalmatian Katt gear — printed and shipped automatically.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="store-grid">
+
+      <!-- TEE -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img src="images/dk tshirt.png" alt="Dalmatian Katt T-Shirt" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">DK Classic Tee</div>
+          <p class="product-desc">Black tee featuring the iconic DK cartoon face with the official autograph. Premium print-on-demand quality — soft, durable, built to last.</p>
+          <div class="product-footer">
+            <span class="product-price">$24.99</span>
+            <button class="buy-btn" data-name="Dalmatian Katt Tee" onclick="handleBuy(this)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOODIE -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img src="images/dk hoodie.png" alt="Dalmatian Katt Hoodie" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">DK Hoodie</div>
+          <p class="product-desc">Black pullover hoodie with the DK face graphic. Heavy-weight fleece, drawstring hood, unisex fit. The official DK winter essential.</p>
+          <div class="product-footer">
+            <span class="product-price">$44.99</span>
+            <button class="buy-btn" data-name="Dalmatian Katt Hoodie" onclick="handleBuy(this)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RINGTONE -->
+      <div class="product-card reveal">
+        <div class="product-img-wrap digital">
+          <div class="digital-icon">🎵</div>
+          <div class="digital-label">Digital Download</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">DK Love Song Ringtone</div>
+          <p class="product-desc">DK's smoothest track as your ringtone. Download includes MP3 (Android) + M4R (iPhone) formats. Instant delivery after purchase.</p>
+          <div class="product-footer">
+            <span class="product-price">$1.99</span>
+            <button class="buy-btn" data-name="DK Love Song Ringtone" onclick="handleBuy(this)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="store-coming-soon">
+      More drops coming soon — stickers, wallpaper packs & more. Follow on YouTube to stay notified.
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <img src="images/dk autograph transparent.png" alt="Dalmatian Katt signature" class="footer-autograph" />
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#characters">Characters</a>
+    <a href="#watch">Watch</a>
+    <a href="#store">Merch</a>
+  </div>
+
+  <a href="https://www.youtube.com/@dalmatiankatt" target="_blank" rel="noopener noreferrer" class="footer-yt">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    youtube.com/@dalmatiankatt
+  </a>
+
+  <p class="footer-copy">© 2026 Dalmatian Katt. All rights reserved.</p>
+</footer>
+
+<!-- ===== JS ===== -->
+<script>
+  // ---- Checkout URLs (fill these in when store is live) ----
+  const CHECKOUT = {
+    "Dalmatian Katt Tee":      "",   // TODO: paste Fourthwall/Printify tee URL
+    "Dalmatian Katt Hoodie":   "",   // TODO: paste Fourthwall/Printify hoodie URL
+    "DK Love Song Ringtone":   ""    // TODO: paste download/Stripe URL
+  };
+
+  function handleBuy(btn) {
+    const name = btn.getAttribute("data-name");
+    const url  = CHECKOUT[name];
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      alert("🎵 Store launching soon! Follow @dalmatiankatt on YouTube to be the first to know.");
+    }
+  }
+
+  // ---- Scroll reveal ----
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

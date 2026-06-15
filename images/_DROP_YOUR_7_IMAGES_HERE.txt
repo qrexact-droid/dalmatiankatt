@@ -1,0 +1,14 @@
+Drop your 7 Dalmation Katt images into THIS folder.
+
+Any filenames are fine — just put all 7 here and tell Claude "they're in."
+Claude will then rename them automatically to:
+
+  logo.png       = the DK grinning face close-up (sticker)
+  dk.png         = DK in the purple suit, panicking on the phone
+  roxy.png       = Roxy the kangaroo on the couch with the drink
+  gorealla.png   = Go Realla the gorilla standing on the street
+  tee.png        = the black T-SHIRT mockup
+  hoodie.png     = the black HOODIE mockup
+  autograph.png  = the white "Dalmation Katt" signature
+
+Then open DalmationKatt_Website.html (one folder up) in your browser.
