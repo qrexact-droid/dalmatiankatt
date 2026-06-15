@@ -626,6 +626,32 @@
     box-shadow: 0 4px 16px rgba(255,122,47,0.5);
   }
 
+  .preview-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.75);
+    border: 2px solid rgba(255,255,255,0.8);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 10;
+  }
+  .preview-btn:hover {
+    background: rgba(123,63,242,0.9);
+    transform: scale(1.1);
+  }
+  .preview-btn.playing .preview-icon::before { content: '\275A\275A'; font-size:14px; }
+  .preview-btn.playing .preview-icon { font-size: 0; }
+  .preview-btn.playing .preview-icon::before { font-size: 14px; }
+
   .store-coming-soon {
     text-align: center;
     margin-top: 40px;
@@ -878,8 +904,12 @@
 
       <!-- RINGTONE -->
       <div class="product-card reveal">
-        <div class="product-img-wrap">
+        <div class="product-img-wrap" style="position:relative;">
           <img src="images/ringtone_shake.png" alt="DK Ringtone - Shake" />
+          <button class="preview-btn" onclick="togglePreview(this)" aria-label="Play preview">
+            <span class="preview-icon">&#9654;</span>
+          </button>
+          <audio class="preview-audio" src="audio/shake_preview.mp3" preload="none"></audio>
         </div>
         <div class="product-info">
           <div class="product-name">DK Ringtone — "Shake"</div>
@@ -927,6 +957,27 @@
     "DK Love Song Ringtone":   "https://dalmatian-katt-shop.fourthwall.com/products/dk-mp3-ringtone-shake",
     "DK Ringtone \u2014 \"Shake\"":  "https://dalmatian-katt-shop.fourthwall.com/products/dk-mp3-ringtone-shake"
   };
+
+  function togglePreview(btn) {
+    const audio = btn.nextElementSibling;
+    const allAudios = document.querySelectorAll('.preview-audio');
+    const allBtns = document.querySelectorAll('.preview-btn');
+    // Stop any other playing previews
+    allAudios.forEach((a, i) => {
+      if (a !== audio) { a.pause(); a.currentTime = 0; allBtns[i].classList.remove('playing'); allBtns[i].innerHTML = '<span class="preview-icon">&#9654;</span>'; }
+    });
+    if (audio.paused) {
+      audio.play();
+      btn.classList.add('playing');
+      btn.innerHTML = '<span class="preview-icon">&#9646;&#9646;</span>';
+      audio.onended = () => { btn.classList.remove('playing'); btn.innerHTML = '<span class="preview-icon">&#9654;</span>'; };
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      btn.classList.remove('playing');
+      btn.innerHTML = '<span class="preview-icon">&#9654;</span>';
+    }
+  }
 
   function handleBuy(btn) {
     const name = btn.getAttribute("data-name");
