@@ -454,6 +454,45 @@
     height: 22px;
   }
 
+  /* YT placeholder */
+  .yt-placeholder {
+    width: 100%;
+    border-radius: 16px;
+    border: 3px solid var(--purple);
+    box-shadow: 0 0 50px rgba(123,63,242,0.4);
+    overflow: hidden;
+  }
+
+  .yt-placeholder-inner {
+    background: linear-gradient(135deg, #1a0833 0%, #0d0220 100%);
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .yt-placeholder-icon {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 20px rgba(255,0,0,0.4));
+  }
+
+  .yt-placeholder-title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.8rem;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .yt-placeholder-desc {
+    color: rgba(255,255,255,0.55);
+    font-size: 1rem;
+    max-width: 400px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
   /* ===== STORE ===== */
   #store {
     background: var(--ink2);
@@ -779,19 +818,19 @@
       <div class="divider"></div>
     </div>
 
-    <div class="yt-embed-wrap reveal">
-      <iframe
-        src="https://www.youtube.com/embed?listType=user_uploads&list=dalmatiankatt&rel=0&modestbranding=1"
-        title="Dalmatian Katt YouTube Channel"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="yt-placeholder reveal">
+      <div class="yt-placeholder-inner">
+        <div class="yt-placeholder-icon">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </div>
+        <h3 class="yt-placeholder-title">Videos Dropping Soon</h3>
+        <p class="yt-placeholder-desc">DK's first episodes are on the way. Subscribe now so you don't miss the drop.</p>
+        <a href="https://www.youtube.com/@dalmatiankatt" target="_blank" rel="noopener noreferrer" class="yt-channel-btn">
+          <svg class="yt-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          Subscribe on YouTube
+        </a>
+      </div>
     </div>
-
-    <a href="https://www.youtube.com/@dalmatiankatt" target="_blank" rel="noopener noreferrer" class="yt-channel-btn">
-      <svg class="yt-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-      Subscribe on YouTube
-    </a>
   </div>
 </section>
 
